@@ -19,7 +19,7 @@
 
 <%-- Boucle for pour afficher une séquence de nombres --%>
     <p>
-    <% for (int i = 1; i <= valeur; i++) { %>
+    <% for (int i = 1; i <= 5; i++) { %>
        <%= "*" %>
     <% } %>
     </p>
