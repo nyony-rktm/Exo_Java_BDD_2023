@@ -2,6 +2,7 @@
 <head>
 <title>Sample Application JSP Page</title>
 </head>
+<meta charset="utf-8">
 <body bgcolor=white>
 
 <form action="#" method="post">
@@ -18,9 +19,9 @@
 
 <%-- Boucle for pour afficher une séquence de nombres --%>
     <% for (int i = 1; i <= 5; i++) { %>
-        <p>Nombre : <%= i %></p>
+        <p><%= "*" %>
     <% } %>
-
+    </p>
 
 
 <%= new String(valeur) %>
