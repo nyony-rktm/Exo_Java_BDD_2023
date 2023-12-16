@@ -16,10 +16,7 @@
 <%-- Vérification de l'existence de la valeur --%>
 <% if (valeur != null && !valeur.isEmpty()) { %>
     
-    <%-- Boucle for pour afficher une ligne d'étoiles --%>
-    <% for (int i = 1; i <= valeur; i++) { %>
-        <p>Nombre : <%= i %></p>
-    <% } %>
+<p>La valeur saisie est : <%= valeur %></p>
 
 
 <% } else { %>
