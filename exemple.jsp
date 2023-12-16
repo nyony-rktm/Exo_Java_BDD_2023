@@ -18,8 +18,9 @@
 <% if (valeur != null && !valeur.isEmpty()) { %>
 
 <%-- Boucle for pour afficher une séquence de nombres --%>
-    <% for (int i = 1; i <= 5; i++) { %>
-        <p><%= "*" %>
+    <p>
+    <% for (int i = 1; i <= valeur; i++) { %>
+       <%= "*" %>
     <% } %>
     </p>
 
