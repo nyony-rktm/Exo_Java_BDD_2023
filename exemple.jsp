@@ -11,15 +11,16 @@
     <input type="submit" value="Afficher">
 </form>
 
-<%-- Récupération de la valeur --%>
+<%-- Récupération de la valeur saisie par l'utilisateur --%>
 <% String valeur = request.getParameter("valeur"); %>
     
 <%-- Vérification de l'existence de la valeur --%>
 <% if (valeur != null && !valeur.isEmpty()) { %>
 
 <%-- Boucle for pour afficher une séquence de nombres --%>
+    int cpt = Integer.parseInt(valeur);
     <p>
-    <% for (int i = 1; i <= 5; i++) { %>
+    <% for (int i = 1; i <= cpt; i++) { %>
        <%= "*" %>
     <% } %>
     </p>
