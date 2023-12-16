@@ -1,12 +1,11 @@
 <html>
 <head>
-<title>Sample Application JSP Page</title>
-</head>
-<meta charset="utf-8">
+<title>Boucles</title>
+<meta charset="utf-8"></head>
 <body bgcolor=white>
-
+<h1>Exercices sur les boucles</h1>
 <form action="#" method="post">
-    <label for="inputValeur">Combien d'étoiles ?</label>
+    <label for="inputValeur">Saisir le nombre d'étoiles : </label>
     <input type="text" id="inputValeur" name="valeur">
     <input type="submit" value="Afficher">
 </form>
@@ -17,7 +16,7 @@
 <%-- Vérification de l'existence de la valeur --%>
 <% if (valeur != null && !valeur.isEmpty()) { %>
 
-<%-- Boucle for pour afficher une séquence de nombres --%>
+<%-- Boucle for pour afficher une ligne d'étoiles --%>
     <%int cpt = Integer.parseInt(valeur); %>
     <p>
     <% for (int i = 1; i <= cpt; i++) { %>
