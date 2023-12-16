@@ -15,7 +15,7 @@
     
 <%-- Vérification de l'existence de la valeur --%>
 <% if (valeur != null && !valeur.isEmpty()) { %>
-    
+    <%= new String(valeur) %>
 <p>La valeur saisie est : <%= valeur %></p>
 
 
