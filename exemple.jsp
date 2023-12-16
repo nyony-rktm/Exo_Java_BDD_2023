@@ -18,9 +18,9 @@
 <% if (valeur != null && !valeur.isEmpty()) { %>
 
 <%-- Boucle for pour afficher une séquence de nombres --%>
-    int cpt = Integer.parseInt(valeur);
+    <%int cpt = Integer.parseInt(valeur); %>
     <p>
-    <% for (int i = 1; i <= 5; i++) { %>
+    <% for (int i = 1; i <= cpt; i++) { %>
        <%= "*" %>
     <% } %>
     </p>
