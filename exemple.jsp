@@ -15,7 +15,15 @@
     
 <%-- Vérification de l'existence de la valeur --%>
 <% if (valeur != null && !valeur.isEmpty()) { %>
-    <%= new String(valeur) %>
+
+<%-- Boucle for pour afficher une séquence de nombres --%>
+    <% for (int i = 1; i <= 5; i++) { %>
+        <p>Nombre : <%= i %></p>
+    <% } %>
+
+
+
+<%= new String(valeur) %>
 <p>La valeur saisie est : <%= valeur %></p>
 
 
