@@ -5,9 +5,9 @@
 <body bgcolor=white>
 
 <form action="#" method="post">
-    <label for="inputValeur">Entrez une valeur :</label>
+    <label for="inputValeur">Combien d'étoiles ?</label>
     <input type="text" id="inputValeur" name="valeur">
-    <input type="submit" value="Envoyer">
+    <input type="submit" value="Afficher">
 </form>
 
 <%-- Récupération de la valeur --%>
@@ -15,7 +15,10 @@
     
 <%-- Vérification de l'existence de la valeur --%>
 <% if (valeur != null && !valeur.isEmpty()) { %>
+    
     <p>La valeur saisie est : <%= valeur %></p>
+
+
 <% } else { %>
     <p>Aucune valeur saisie.</p>
 <% } %>
