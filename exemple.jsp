@@ -4,18 +4,24 @@
 </head>
 <body bgcolor=white>
 
-<table border="0">
-<tr>
-<td align=center>
-<img src="images/tomcat.gif">
-</td>
-<td>
-<h1>Sample Application JSP Page</h1>
-This is the output of a JSP page that is part of the Hello, World
-application.
-</td>
-</tr>
-</table>
+<form action="#" method="post">
+    <label for="inputValeur">Entrez une valeur :</label>
+    <input type="text" id="inputValeur" name="valeur">
+    <input type="submit" value="Envoyer">
+</form>
+
+<%-- Récupération de la valeur --%>
+<% String valeur = request.getParameter("valeur"); %>
+    
+<%-- Vérification de l'existence de la valeur --%>
+<% if (valeur != null && !valeur.isEmpty()) { %>
+    <p>La valeur saisie est : <%= valeur %></p>
+<% } else { %>
+    <p>Aucune valeur saisie.</p>
+<% } %>
+
+
+
 
 <%= new String("Hello!") %>
 
