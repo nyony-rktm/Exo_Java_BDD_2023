@@ -1,37 +1,31 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
 <html>
 <head>
-<title>Conditions</title>
+    <title>Condition if entre deux valeurs en JSP</title>
 </head>
-<body bgcolor=white>
-<h1>Exercices sur les conditions</h1>
-<form action="#" method="post">
-    <p>Valeur 1 ? <input type="text" id="inputValeur" name="valeur1">
-    <p>Valeur 2 ? <input type="text" id="inputValeur" name="valeur2">
-    <input type="submit" value="Afficher">
-</form>
-
-<%-- Récupération de la valeur saisie par l'utilisateur --%>
-<% String valeur1 = request.getParameter("valeur1"); %>
-<% String valeur2 = request.getParameter("valeur2"); %>
-  
-<%-- Vérification de l'existence de la valeur --%>
-<% if (valeur1 != null && !valeur1.isEmpty()) { %>
-
-    <%-- Conversion des valeurs en entiers pour la comparaison --%>
-    <%int val1 = Integer.parseInt(valeur1); %>
-    <%int val2 = Integer.parseInt(valeur2); %>
-    <p>
-    <%-- Condition if pour comparer les valeurs --%>
-        <% if (val1 > val2) { %>
+<body>
+    <%-- Récupération des valeurs --%>
+    <% String valeur1 = request.getParameter("valeur1"); %>
+    <% String valeur2 = request.getParameter("valeur2"); %>
+    
+    <%-- Vérification de la condition entre les deux valeurs --%>
+    <% if (valeur1 != null && valeur2 != null) { %>
+        <%-- Conversion des valeurs en entiers pour la comparaison --%>
+        <% int intValeur1 = Integer.parseInt(valeur1); %>
+        <% int intValeur2 = Integer.parseInt(valeur2); %>
+        
+        <%-- Condition if pour comparer les valeurs --%>
+        <% if (intValeur1 > intValeur2) { %>
             <p>Valeur 1 est supérieure à Valeur 2.</p>
-        <% } else if (val1 < val2) { %>
+        <% } else if (intValeur1 < intValeur2) { %>
             <p>Valeur 1 est inférieure à Valeur 2.</p>
         <% } else { %>
             <p>Valeur 1 est égale à Valeur 2.</p>
         <% } %>
-    <% } 
-    </p>
+    <% } else { %>
+        <p>Assurez-vous de fournir les deux valeurs.</p>
+    <% } %>
 
 <h2>Exercice 1 : Le carré d'étoiles</h2>
 <p>Ecrire le code afin de produire un carré d'étoile</p>
