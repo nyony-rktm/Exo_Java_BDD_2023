@@ -10,9 +10,11 @@
     <input type="submit" value="Afficher">
 </form>
 
-    <%-- Récupération des valeurs --%>
-    <% String valeur1 = request.getParameter("valeur1"); %>
-    <% String valeur2 = request.getParameter("valeur2"); %>
+    
+
+
+
+
 
 
 <h2>Exercice 1 : Le carré d'étoiles</h2>
