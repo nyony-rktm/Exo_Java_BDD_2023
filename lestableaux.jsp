@@ -6,7 +6,7 @@
 <body bgcolor=white>
 <h1>Exercices sur les tableaux</h1>
 <form action="#" method="post">
-    <p>Saisir une suite de chiffres (au minimu 3 chiffres à la suite, exemple : 6 78 15) : <input type="text" id="inputValeur" name="chaine">
+    <p>Saisir au minimu 3 chiffres à la suite, exemple : 6 78 15 <input type="text" id="inputValeur" name="chaine">
     <p><input type="submit" value="Afficher">
 </form>
 <%-- Récupération des valeurs --%>
@@ -15,6 +15,7 @@
     <% if (chaine != null) { %>
 
     <%-- Division de la chaîne de chiffres séparés par des espaces --%>
+    <% in[] tableauDeChiffres = Integer.parseInt(chaine.split("\\s+")); %>
     
 
     
