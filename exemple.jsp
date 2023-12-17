@@ -28,7 +28,7 @@
 <h2>Exercice 1 : Le carré d'étoiles</h2>
 <p>Ecrire le code afin de produire un carré d'étoile</p>
 <p>Exemple si l'utilsateur saisie le valeur 5</p>
-<p>*****/p>
+<p>*****\n*****</p>
 <p>*****/p>
 <p>*****/p>
 <p>*****/p>
