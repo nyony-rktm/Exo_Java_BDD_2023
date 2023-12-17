@@ -26,7 +26,10 @@
     <% String sousChaine = chaine.substring(2, 6); %>
     <p>Une sous chaine de votre texte : <%= sousChaine %></p>
 
-
+    <%-- Recharche de la lettre "e" --%>
+    <% char recherche = 'e'; 
+       int position = chainee.indexOf(recherche); %>
+    <p>Votre premier "e" est en : <%= position %></p>
 
     
 <h2>Exercice 1 : Comparaison 1</h2>
