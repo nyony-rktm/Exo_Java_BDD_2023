@@ -1,7 +1,8 @@
 <html>
 <head>
 <title>Boucles</title>
-<meta charset="utf-8"></head>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8">
+</head>
 <body bgcolor=white>
 <h1>Exercices sur les boucles</h1>
 <form action="#" method="post">
