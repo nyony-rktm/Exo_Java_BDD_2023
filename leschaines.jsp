@@ -6,7 +6,7 @@
 <body bgcolor=white>
 <h1>Exercices sur les chaines de charactères</h1>
 <form action="#" method="post">
-    <p>Saisir une chaine (du texte) : <input type="text" id="inputValeur" name="chaine">
+    <p>Saisir une chaine (Du texte avec 6 caractères minimum) : <input type="text" id="inputValeur" name="chaine">
     <p><input type="submit" value="Afficher">
 </form>
 <%-- Récupération des valeurs --%>
@@ -20,11 +20,14 @@
 
     <%-- Extraction du 3° caractère dans votre chaine --%>
     <% char caractereExtrait = chaine.charAt(2); %>
-    <p>Le 3° caractère de votre chaine est la lettre <%= chaine.charAt(2); %></p>
+    <p>Le 3° caractère de votre chaine est la lettre <%= caractereExtrait %></p>
+
+    <%-- Obtention d'une sous-chaîne --%>
+    <% String sousChaine = maChaine.substring(2, 6); %>
+    <p>Une sous chaine de votre texte : <%= sousChaine %></p>
 
 
 
-   
     
 <h2>Exercice 1 : Comparaison 1</h2>
 <p>Ecrire un programme qui demande à l'utilisateur de saisir 3 valeurs (des chiffres),</br>
