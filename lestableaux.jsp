@@ -16,12 +16,22 @@
 
     <%-- Division de la chaîne de chiffres séparés par des espaces --%>
     <% String[] tableauDeChiffres = chaine.split("\\s+"); %>
-    <p>Chiffre 1 : <%= Integer.parseInt(tableauDeChiffres[0]) %></br>
-    <p>Chiffre 2 : <%= Integer.parseInt(tableauDeChiffres[1]) %></br>
-    <p>Chiffre 3 : <%= Integer.parseInt(tableauDeChiffres[2]) %></p>
+    <p>La tableau contien <%= tableauDeChiffres.length %> valeurs</br>
+    Chiffre 1 : <%= Integer.parseInt(tableauDeChiffres[0]) %></br>
+    Chiffre 2 : <%= Integer.parseInt(tableauDeChiffres[1]) %></br>
+    Chiffre 3 : <%= Integer.parseInt(tableauDeChiffres[2]) %></p>
     
-<h2>Exercice 1 : Combien de 'e' dans notre chaine de charactère ?</h2>
-<p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de charactères</p>
+<h2>Exercice 1 : La carré de la première valeur</h2>
+<p>Ecrire un programme afin d'afficher le carré de la première valeur</p>
+
+<h2>Exercice 2 : La somme des 2 premières valeurs</h2>
+<p>Ecrire un programme afin d'afficher la somme des deux premières valeurs</p>
+
+<h2>Exercice 3 : La somme de toutes les valeurs</h2>
+<p>L'utilisateur peut à présent saisir autant de valeurs qu'il le soouhaite dans champs de saisie.</br>
+Ecrire un programme afin de faire la somme de toutes ses valeurs</p>
+
+
 
 <h2>Exercice 2 : Affichage verticale</h2>
 <p>Ecrire le programme pour afficher le texte en vertical</br>
