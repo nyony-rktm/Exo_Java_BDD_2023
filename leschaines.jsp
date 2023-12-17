@@ -11,14 +11,17 @@
 </form>
 <%-- Récupération des valeurs --%>
     <% String chaine = request.getParameter("chaine"); %>
-
-    <%-- Vérification de la condition entre les deux valeurs --%>
+    
     <% if (chaine != null) { %>
 
-  <%-- Obtention de la longueur de la chaîne --%>
+    <%-- Obtention de la longueur de la chaîne --%>
     <% int longueurChaine = chaine.length(); %>
-    
-    <p>La longueur de la chaîne "<%= chaine %>" est : <%= longueurChaine %></p>
+    <p>La longueur de votre chaîne est de <%= longueurChaine %> caractères</p>
+
+    <%-- Extraction du 3° caractère dans votre chaine --%>
+    <p>Le 3° caractère de votre chaine est la lettre <%= chaine.charAt(3); %></p>
+
+
 
    
     
