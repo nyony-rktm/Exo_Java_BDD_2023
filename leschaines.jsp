@@ -32,17 +32,27 @@
     <p>Votre premier "e" est en : <%= position %></p>
 
     
-<h2>Exercice 1 : Comparaison 1</h2>
-<p>Ecrire un programme qui demande à l'utilisateur de saisir 3 valeurs (des chiffres),</br>
-A, B et C et dites nous si la valeur de C est comprise entre A et B.</br>
-Exemple :</br>
-A = 10</br>
-B = 20</br>
-C = 15</br>
-Oui C est compris entre A et B</p>
+<h2>Exercice 1 : Combien de 'e' dans notre chaine de charactère ?</h2>
+<p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de charactères</p>
 
-<h2>Exercice 2 : Pair ou Impair ?</h2>
-<p>Écrivez un programme pour vérifier si un nombre est pair ou impair en utilisant une structure if</p>
+<h2>Exercice 2 : Retour à la ligne</h2>
+<p>La présence d'un espace provoque un retour à la ligne </br>
+Exemple : L'hiver sera pluvieux</br>
+L'hiver</br>
+sera</br>
+pluvieux</p>
+
+<h2>Exercice 3 : Afficher une lettre sur deux</h2>
+<p>Ecrire le programme pour afficher seulement une lettre sur deux de votre texte </br>
+Exemple : L'hiver sera pluvieux</br>
+Lhvrsr lvex</p>
+
+<h2>Exercice 3 : La phrase en verlant</h2>
+<p>Ecrire le programme afin d'afficher le texte en verlant </br>
+Exemple : L'hiver sera pluvieux</br>
+xueivulp ares revih'l</p>
+
+
 
 <% } %>
 <p><a href="index.html">Retour au sommaire</a></p>
