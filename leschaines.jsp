@@ -15,8 +15,7 @@
     <%-- Vérification de la condition entre les deux valeurs --%>
     <% if (chaine != null) { %>
 
-    <%-- Obtention de la longueur de la chaîne --%>
-    <p>Votre chaine contient <%= chaine.length(); %> caractères%>
+    
    
     
 <h2>Exercice 1 : Comparaison 1</h2>
