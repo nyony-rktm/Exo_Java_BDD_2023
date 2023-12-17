@@ -18,7 +18,7 @@
   <%-- Obtention de la longueur de la chaîne --%>
     <% int longueurChaine = chaine.length(); %>
     
-    <p>La longueur de la chaîne "<%= Chaine %>" est : <%= longueurChaine %></p>
+    <p>La longueur de la chaîne "<%= chaine %>" est : <%= longueurChaine %></p>
 
    
     
