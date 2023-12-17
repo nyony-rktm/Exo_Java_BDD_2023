@@ -15,7 +15,11 @@
     <%-- Vérification de la condition entre les deux valeurs --%>
     <% if (chaine != null) { %>
 
+  <%-- Obtention de la longueur de la chaîne --%>
+    <% int longueurChaine = Chaine.length(); %>
     
+    <p>La longueur de la chaîne "<%= Chaine %>" est : <%= longueurChaine %></p>
+
    
     
 <h2>Exercice 1 : Comparaison 1</h2>
