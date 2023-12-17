@@ -23,7 +23,7 @@
     <p>Le 3° caractère de votre chaine est la lettre <%= caractereExtrait %></p>
 
     <%-- Obtention d'une sous-chaîne --%>
-    <% String sousChaine = maChaine.substring(2, 6); %>
+    <% String sousChaine = chaine.substring(2, 6); %>
     <p>Une sous chaine de votre texte : <%= sousChaine %></p>
 
 
