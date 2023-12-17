@@ -18,7 +18,9 @@
     <% int longueurChaine = chaine.length(); %>
     <p>La longueur de votre chaîne est de <%= longueurChaine %> caractères</p>
 
-
+    <%-- Extraction du 3° caractère dans votre chaine --%>
+    <% char caractereExtrait = chaine.charAt(3); %>
+    <p>Le 3° caractère de votre chaine est la lettre <%= caractereExtrait %></p>
 
 
 
