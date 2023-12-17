@@ -6,7 +6,7 @@
 <body bgcolor=white>
 <h1>Exercices sur les boucles</h1>
 <form action="#" method="post">
-    <label for="inputValeur">Saisir le nombre d'etoiles : </label>
+    <label for="inputValeur">Saisir le nombre d'étoiles : </label>
     <input type="text" id="inputValeur" name="valeur">
     <input type="submit" value="Afficher">
 </form>
@@ -25,8 +25,14 @@
     <% } %>
     </p>
 
-<h2>Exerice 1 : Carre</h2>
+<h2>Exercice 1 : Le carré d'étoiles</h2>
 <p>Ecrire le code afin de produire un carré d'étoile</p>
+<p>Exemple si l'utilsateur saisie le valeur 5</p>
+<p>*****/p>
+<p>*****/p>
+<p>*****/p>
+<p>*****/p>
+<p>*****/p>
 
 
 <p>La valeur saisie est : <%= valeur %></p>
