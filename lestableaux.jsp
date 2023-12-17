@@ -15,7 +15,7 @@
     <% if (chaine != null) { %>
 
     <%-- Division de la chaîne de chiffres séparés par des espaces --%>
-    <% in[] tableauDeChiffres = Integer.parseInt(chaine.split("\\s+")); %>
+    
 
     
 <h2>Exercice 1 : Combien de 'e' dans notre chaine de charactère ?</h2>
