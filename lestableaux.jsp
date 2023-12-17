@@ -15,7 +15,7 @@
     <% if (chaine != null) { %>
 
     <%-- Division de la chaîne de chiffres séparés par des espaces --%>
-    <% String[] tableauDeChiffres = maChaine.split("\\s+"); %>
+    <% String[] tableauDeChiffres = chaine.split("\\s+"); %>
     <%= tableauDeChiffres[0] %>
 
     
