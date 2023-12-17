@@ -18,18 +18,19 @@
 <%-- Vérification de l'existence de la valeur --%>
 <% if (valeur1 != null && !valeur1.isEmpty()) { %>
 
-<%-- condition if pour comparrer 2 champs de valeur --%>
+    <%-- Conversion des valeurs en entiers pour la comparaison --%>
     <%int val1 = Integer.parseInt(valeur1); %>
     <%int val2 = Integer.parseInt(valeur2); %>
     <p>
-      <% if (val1 > val2){ %>
-         <%= "La valeur 1 est supérieure à la valeur 2" %>
-      <% } %>
-      <% elseif (val1 < val2){ %>
-         <%= "La valeur 2 est supérieure à la valeur 1" %>
-      <% } %>
-      <% else { %><%= "Egalité" %> <% } %>
-    <% } %>
+    <%-- Condition if pour comparer les valeurs --%>
+        <% if (val1 > val2) { %>
+            <p>Valeur 1 est supérieure à Valeur 2.</p>
+        <% } else if (val1 < val2) { %>
+            <p>Valeur 1 est inférieure à Valeur 2.</p>
+        <% } else { %>
+            <p>Valeur 1 est égale à Valeur 2.</p>
+        <% } %>
+    <% } 
     </p>
 
 <h2>Exercice 1 : Le carré d'étoiles</h2>
