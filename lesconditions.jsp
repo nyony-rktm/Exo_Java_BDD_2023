@@ -1,10 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Condition if entre deux valeurs en JSP</title>
+<title>Boucles</title>
 </head>
-<body>
+<body bgcolor=white>
+<h1>Exercices sur les boucles</h1>
+<form action="#" method="post">
+    <p>Saisir la valeur 1 : <input type="text" id="inputValeur" name="valeur1">
+    <p>Saisir la valeur 2 : <input type="text" id="inputValeur" name="valeur2">
+    <input type="submit" value="Afficher">
+</form>
+
     <%-- Récupération des valeurs --%>
     <% String valeur1 = request.getParameter("valeur1"); %>
     <% String valeur2 = request.getParameter("valeur2"); %>
