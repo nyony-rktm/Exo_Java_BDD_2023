@@ -1,12 +1,12 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
 <head>
 <title>Boucles</title>
-<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8">
 </head>
 <body bgcolor=white>
 <h1>Exercices sur les boucles</h1>
 <form action="#" method="post">
-    <label for="inputValeur">Saisir le nombre d'étoiles : </label>
+    <label for="inputValeur">Saisir le nombre d'etoiles : </label>
     <input type="text" id="inputValeur" name="valeur">
     <input type="submit" value="Afficher">
 </form>
@@ -25,8 +25,10 @@
     <% } %>
     </p>
 
+<h2>Exerice 1 : Carre</h2>
+<p>Ecrire le code afin de produire un carré d'étoile</p>
 
-<%= new String(valeur) %>
+
 <p>La valeur saisie est : <%= valeur %></p>
 
 
