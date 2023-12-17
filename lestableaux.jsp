@@ -14,22 +14,8 @@
     
     <% if (chaine != null) { %>
 
-    <%-- Obtention de la longueur de la chaîne --%>
-    <% int longueurChaine = chaine.length(); %>
-    <p>La longueur de votre chaîne est de <%= longueurChaine %> caractères</p>
-
-    <%-- Extraction du 3° caractère dans votre chaine --%>
-    <% char caractereExtrait = chaine.charAt(2); %>
-    <p>Le 3° caractère de votre chaine est la lettre <%= caractereExtrait %></p>
-
-    <%-- Obtention d'une sous-chaîne --%>
-    <% String sousChaine = chaine.substring(2, 6); %>
-    <p>Une sous chaine de votre texte : <%= sousChaine %></p>
-
-    <%-- Recharche de la lettre "e" --%>
-    <% char recherche = 'e'; 
-       int position = chaine.indexOf(recherche); %>
-    <p>Votre premier "e" est en : <%= position %></p>
+    <%-- Division de la chaîne de chiffres séparés par des espaces --%>
+    <% in[] tableauDeChiffres = Integer.parseInt(chaine.split("\\s+")); %>
 
     
 <h2>Exercice 1 : Combien de 'e' dans notre chaine de charactère ?</h2>
