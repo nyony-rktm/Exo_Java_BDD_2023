@@ -39,7 +39,17 @@
         conn.close();
     %>
 
+<h2>Exercice 1 : Les films entre 2000 et 2015</h2>
+<p>Extraire les films dont l'année est supérieur à l'année 2000 et inférieur à 2015.</p>
 
+<h2>Exercice 2 : Année de recherche</h2>
+<p>Créer un champ de saisie permettant à l'utilisateur de choisir l'année de sa recherche.</p>
+
+<h2>Exercice 3 : Modification du titre du film</h2>
+<p>Créer un fichier permettant de modifier le titre d'un film sur la base de son ID (ID choisi par l'utilisateur)</p>
+
+<h2>Exercice 4 : La valeur maximum</h2>
+<p>Créer un formulaire pour saisir un nouveau film dans la base de données</p>
 
 </body>
 </html>
