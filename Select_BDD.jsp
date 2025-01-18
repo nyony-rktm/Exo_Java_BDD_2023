@@ -10,8 +10,8 @@
     <h1>Exemple de connexion à MariaDB avec JSP</h1>
     <% 
     String url = "jdbc:mariadb://localhost:3306/films";
-    String user = "mysql";
-    String password = "mysql";
+    String user = "cnam";
+    String password = "cnam";
 
         // Charger le pilote JDBC (pilote disponible dans WEB-INF/lib)
         Class.forName("org.mariadb.jdbc.Driver");
@@ -19,7 +19,7 @@
         // Établir la connexion
         Connection conn = DriverManager.getConnection(url, user, password);
         // Exemple de requête SQL
-        String sql = "SELECT idFilm, titre, année FROM Film WHERE année >= 2000";
+        String sql = "SELECT idFilm, titre, annee FROM Film WHERE annee >= 2000";
         PreparedStatement pstmt = conn.prepareStatement(sql);
         ResultSet rs = pstmt.executeQuery();
 
@@ -27,7 +27,7 @@
         while (rs.next()) {
             String colonne1 = rs.getString("idFilm");
             String colonne2 = rs.getString("titre");
-            String colonne3 = rs.getString("année");
+            String colonne3 = rs.getString("annee");
             // Faites ce que vous voulez avec les données...
             //Exemple d'affichage de 2 colonnes
             out.println("id : " + colonne1 + ", titre : " + colonne2 + ", année : " + colonne3 + "</br>");
