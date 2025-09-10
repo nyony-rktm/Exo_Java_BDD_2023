@@ -34,34 +34,42 @@
 <p>Ecrire un programme qui demande à l'utilisateur de saisir 3 valeurs (des chiffres),</br>
 A, B et C et dites nous si la valeur de C est comprise entre A et B.</br></p>
 <form action="#" method="post">
-    <p>Saisir la valeur A : <input type="text" id="inputValeur" name="valeur1">
-    <p>Saisir la valeur B : <input type="text" id="inputValeur" name="valeur2">
-    <p>Saisir la valeur C : <input type="text" id="inputValeur" name="valeur3">
+    <p>Saisir la valeur A : <input type="text" id="inputValeur" name="valeurA">
+    <p>Saisir la valeur B : <input type="text" id="inputValeur" name="valeurB">
+    <p>Saisir la valeur C : <input type="text" id="inputValeur" name="valeurC">
     <p><input type="submit" value="Verifier">
 </form>
 <%-- Récupération des valeurs --%>
-    <% String valeur1 = request.getParameter("valeur1"); %>
-    <% String valeur2 = request.getParameter("valeur2"); %>
-    <% String valeur3 = request.getParameter("valeur3"); %>
+    <% String valeurA = request.getParameter("valeurA"); %>
+    <% String valeurB = request.getParameter("valeurB"); %>
+    <% String valeurC = request.getParameter("valeurC"); %>
 
     <%-- Vérification de la condition entre les deux valeurs --%>
-    <% if (valeur1 != null && valeur2 != null && valeur3 != null) { %>
+    <% if (valeurA != null && valeurB != null && valeurC != null) { %>
         <%-- Conversion des valeurs en entiers pour la comparaison --%>
-        <% int intValeur1 = Integer.parseInt(valeur1); %>
-        <% int intValeur2 = Integer.parseInt(valeur2); %>
-        <% int intValeur3 = Integer.parseInt(valeur3); %>
+        <% int intValeurA = Integer.parseInt(valeurA); %>
+        <% int intValeurB = Integer.parseInt(valeurB); %>
+        <% int intValeurC = Integer.parseInt(valeurC); %>
 
         <p>
-        A = <%= valeur1 %> </br>
-        B = <%= valeur2 %> </br>
-        C = <%= valeur3 %> </br>
+        A = <%= valeurA %> </br>
+        B = <%= valeurB %> </br>
+        C = <%= valeurC %> </br>
         </p>
         
         <%-- Condition if pour comparer les valeurs --%>
-        <% if (intValeur1 < intValeur3 && intValeur3 < intValeur2) { %>
-            <p>Oui C est compris entre A et B</p>
-        <% } else { %>
-            <p>Non C n'est pas compris entre A et B</p>
+        <% if (intValeurA < intValeurB) { %>
+            <% if (intValeurA < intValeurC && intValeurC < intValeurB) { %>
+                <p>Oui C est compris entre A et B</p>
+            <% } else { %>
+                <p>Non C n'est pas compris entre A et B</p>
+            <% } %>
+        <% } else if (intValeurB < intValeurA) { %>
+            <% if (intValeurB < intValeurC && intValeurC < intValeurA) { %>
+                <p>Oui C est compris entre A et B</p>
+            <% } else { %>
+                <p>Non C n'est pas compris entre A et B</p>
+            <% } %>
         <% } %>
 
 <h2>Exercice 2 : Pair ou Impair ?</h2>
