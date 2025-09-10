@@ -102,7 +102,7 @@
 <p>Ecrire le code afin de produire un losange</p>
 <%-- Boucle for pour afficher un triangle rectangle croissant --%>
     <p>
-    <% for (int i = i; i <= cpt; i++) { %>
+    <% for (int i = 1; i <= cpt; i++) { %>
         <%-- Affichage des espaces --%>
         <% for (int l = 1; l <= cpt - i; l++) { %>
             &nbsp;&nbsp;
