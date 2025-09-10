@@ -28,6 +28,7 @@
         <% } else { %>
             <p>Valeur 1 est égale à Valeur 2.</p>
         <% } %>
+    <% } %>
    
     
 <h2>Exercice 1 : Comparaison 1</h2>
@@ -70,6 +71,8 @@ A, B et C et dites nous si la valeur de C est comprise entre A et B.</br></p>
             <% } else { %>
                 <p>Non C n'est pas compris entre A et B</p>
             <% } %>
+        <% } else { %>
+                <p>A = B</p>
         <% } %>
 
 <h2>Exercice 2 : Pair ou Impair ?</h2>
