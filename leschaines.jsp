@@ -34,6 +34,16 @@
     
 <h2>Exercice 1 : Combien de 'e' dans notre chaine de charactère ?</h2>
 <p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de charactères</p>
+<%-- Affichage du nombre de 'e' dans la chaîne --%>
+<%
+    int nb_e = 0;
+    for (int i = 0; i < chaine.length(); i++) {
+        if (chaine.charAt(i) == 'e' || chaine.charAt(i) == 'E') {
+            nb_e++;
+        }
+    }
+%>
+<p>Le nombre de lettres "e" dans votre chaîne est : <%= nb_e %></p>
 
 <h2>Exercice 2 : Affichage verticale</h2>
 <p>Ecrire le programme pour afficher le texte en vertical</br>
