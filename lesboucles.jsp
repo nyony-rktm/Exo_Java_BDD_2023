@@ -134,7 +134,7 @@
 
 <h2>Exercice 7 : La table de multiplication</h2>
 <p>Ecrire le code afin de créser une table de multiplication</p>
-<%-- Boucle for pour afficher un triangle rectangle croissant --%>
+<%-- Boucle for pour afficher une table de multiplication --%>
     <p>
     <% for (int i = 1; i <= cpt; i++) { %>
         <%= cpt %> x <%= i %> = <%= (cpt * i) %> <br/>
