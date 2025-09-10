@@ -45,7 +45,7 @@ A, B et C et dites nous si la valeur de C est comprise entre A et B.</br></p>
     <% String valeurB = request.getParameter("valeurB"); %>
     <% String valeurC = request.getParameter("valeurC"); %>
 
-    <%-- Vérification de la condition entre les deux valeurs --%>
+    <%-- Vérification de la condition entre les trois valeurs --%>
     <% if (valeurA != null && valeurB != null && valeurC != null) { %>
         <%-- Conversion des valeurs en entiers pour la comparaison --%>
         <% int intValeurA = Integer.parseInt(valeurA); %>
@@ -72,11 +72,30 @@ A, B et C et dites nous si la valeur de C est comprise entre A et B.</br></p>
                 <p>Non C n'est pas compris entre A et B</p>
             <% } %>
         <% } else { %>
-                <p>A = B</p>
+                <p>Erreur : A = B</p>
         <% } %>
 
 <h2>Exercice 2 : Pair ou Impair ?</h2>
 <p>Écrivez un programme pour vérifier si un nombre est pair ou impair en utilisant une structure if</p>
+<form action="#" method="post">
+    <p>Saisir une valeur : <input type="text" id="inputValeur" name="valeur">
+    <p><input type="submit" value="Afficher">
+</form>
+<%-- Récupération de la valeur --%>
+    <% String valeur = request.getParameter("valeur"); %>
+
+    <%-- Vérification de la condition sur la valeur --%>
+    <% if (valeur != null) { %>
+        <%-- Conversion de la valeur en entier pour la comparaison --%>
+        <% int intValeur = Integer.parseInt(valeur); %>
+        
+        <%-- Condition if pour comparer les valeurs --%>
+        <% if (intValeur % 2 == 0) { %>
+            <p>Le nombre est pair.</p>
+        <% } else { %>
+            <p>Le nombre est impair.</p>
+        <% } %>
+    <% } %>
 
 <% } %>
 <p><a href="index.html">Retour au sommaire</a></p>
