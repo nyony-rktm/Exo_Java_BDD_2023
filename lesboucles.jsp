@@ -45,7 +45,7 @@
 <%-- Boucle for pour afficher un triangle rectangle aligné sur la gauche --%>
     <p>
     <% for (int k = 1; k <= cpt; k++) { %>
-        <% for (int l = 1; l <= i; l++) { %>
+        <% for (int l = 1; l <= k; l++) { %>
            <%= "*" %>
         <% } %>
     </br>
