@@ -75,6 +75,7 @@ A, B et C et dites nous si la valeur de C est comprise entre A et B.</br></p>
                 <p>Erreur : A = B</p>
         <% } %>
 <% } %>
+
 <h2>Exercice 2 : Pair ou Impair ?</h2>
 <p>Écrivez un programme pour vérifier si un nombre est pair ou impair en utilisant une structure if</p>
 <form action="#" method="post">
@@ -95,7 +96,6 @@ A, B et C et dites nous si la valeur de C est comprise entre A et B.</br></p>
         <% } else { %>
             <p>Le nombre est impair.</p>
         <% } %>
-    <% } %>
 <% } %>
 <p><a href="index.html">Retour au sommaire</a></p>
 </body>
