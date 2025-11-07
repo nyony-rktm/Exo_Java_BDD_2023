@@ -81,7 +81,21 @@
 </p>
 
 <h2>Exercice 6 : La valeur le plus proche de 0</h2>
-<p>Trouvez la valeur la plus proche de 0 (chiffres positifs ou négatifs)</p>
+<p>
+<%
+    int procheZero = nombres[0];
+    int minAbs = Math.abs(nombres[0]);
+
+    for (int i = 1; i < nombres.length; i++) {
+        int absValue = Math.abs(nombres[i]);
+        if (absValue < minAbs) {
+            minAbs = absValue;
+            procheZero = nombres[i];
+        }
+    }
+    out.println("La valeur le plus proche de 0 est: " + procheZero);            
+%>
+</p>
 
 <h2>Exercice 7 : La valeur le plus proche de 0 (2° version)</h2>
 <p>Trouvez la valeur la plus proche de 0 (chiffres positifs ou négatifs)</p>
