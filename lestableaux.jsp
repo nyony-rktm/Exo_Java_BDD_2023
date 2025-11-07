@@ -6,7 +6,7 @@
 <body bgcolor=white>
 <h1>Exercices sur les tableaux</h1>
 <form action="#" method="post">
-    <p>Saisir au minimu 3 chiffres à la suite, exemple : 6 78 15 <input type="text" id="inputValeur" name="chaine">
+    <p>Saisir au minimum 3 chiffres à la suite, exemple : 6 78 15 <input type="text" id="inputValeur" name="chaine">
     <p><input type="submit" value="Afficher">
 </form>
 <%-- Récupération des valeurs --%>
@@ -20,22 +20,65 @@
     Chiffre 1 : <%= Integer.parseInt(tableauDeChiffres[0]) %></br>
     Chiffre 2 : <%= Integer.parseInt(tableauDeChiffres[1]) %></br>
     Chiffre 3 : <%= Integer.parseInt(tableauDeChiffres[2]) %></p>
+
+<%-- Conversion des valeurs --%>
+<%
+    int[] nombres = new int[tableauDeChiffres.length];
+    for (int i = 0; i < tableauDeChiffres.length; i++) {
+        nombres[i] = Integer.parseInt(tableauDeChiffres[i]);
+    }
+%>
     
 <h2>Exercice 1 : La carré de la première valeur</h2>
-<p>Ecrire un programme afin d'afficher le carré de la première valeur</p>
+<p>
+<%
+    int carre = nombres[0] * nombres[0];
+    out.println("Le carré de la première valeur est: " + carre);
+%>
+</p>
 
 <h2>Exercice 2 : La somme des 2 premières valeurs</h2>
-<p>Ecrire un programme afin d'afficher la somme des deux premières valeurs</p>
+<p>
+<%
+    int sommeDeuxPremiers = nombres[0] + nombres[1];
+    out.println("La somme des 2 premières valeurs est: " + sommeDeuxPremiers);
+%>
+</p>
 
 <h2>Exercice 3 : La somme de toutes les valeurs</h2>
-<p>L'utilisateur peut à présent saisir autant de valeurs qu'il le souhaite dans champs de saisie.</br>
-Ecrire un programme afin de faire la somme de toutes les valeurs saisie par l'utilisateur</p>
+<p>
+<%
+    int somme = 0;
+    for (int nombre : nombres) {somme += nombre;}
+    out.println("La somme de toutes les valeurs est: " + somme);
+%>
+</p>
 
 <h2>Exercice 4 : La valeur maximum</h2>
-<p>Ecrire un programme pour afficher la valeur maximale saisie par l'utilisateur</p>
+<p>
+<%
+    int max = nombres[0];
+    for (int i = 1; i < nombres.length; i++) {
+        if (nombres[i] > max) {
+            max = nombres[i];
+        }
+    }
+    out.println("La valeur maximale est: " + max);
+%>
+</p>
 
 <h2>Exercice 5 : La valeur minimale</h2>
-<p>Ecrire un programme pour afficher la valeur minimale saisie par l'utilisateur</p>
+<p>
+<%
+    int min = nombres[0];
+    for (int i = 1; i < nombres.length; i++) {
+        if (nombres[i] < min) {
+            min = nombres[i];
+        }
+    }
+    out.println("La valeur minimale est: " + min);
+%>
+</p>
 
 <h2>Exercice 6 : La valeur le plus proche de 0</h2>
 <p>Trouvez la valeur la plus proche de 0 (chiffres positifs ou négatifs)</p>
