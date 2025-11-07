@@ -98,8 +98,23 @@
 </p>
 
 <h2>Exercice 7 : La valeur le plus proche de 0 (2° version)</h2>
-<p>Trouvez la valeur la plus proche de 0 (chiffres positifs ou négatifs)</p>
-<p>En cas d'égalité entre un chiffre positif et négatif, affichez le chiffre positif</p>
+<p>
+    <%
+        int procheZero2 = nombres[0];
+        int minAbs2 = Math.abs(nombres[0]);
+
+        for (int i = 1; i < nombres.length; i++) {
+            int absValue = Math.abs(nombres[i]);
+            if (absValue < minAbs2) {
+                minAbs2 = absValue;
+                procheZero2 = nombres[i];
+            } else if (absValue == minAbs2 && nombres[i] > 0 && procheZero2 < 0) {
+                procheZero2 = nombres[i];
+            }
+        }
+        out.println("La valeur le plus proche de 0 est: " + procheZero2);
+    %>
+</p>
 
 <% } %>
 <p><a href="index.html">Retour au sommaire</a></p>
