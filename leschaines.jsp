@@ -46,35 +46,59 @@
 <p>Le nombre de lettres "e" dans votre chaîne est : <%= nb_e %></p>
 
 <h2>Exercice 2 : Affichage verticale</h2>
-<p>Ecrire le programme pour afficher le texte en vertical</br>
-Exemple : Bonjour</br>
-B</br>
-o</br>
-n</br>
-j</br>
-o</br>
-u</br>
-r</p>
+<%
+    for (int i = 0; i < chaine.length(); i++) {
+        out.println(chaine.charAt(i) + "<br>");
+    }
+%>
 
 <h2>Exercice 3 : Retour à la ligne</h2>
-<p>La présence d'un espace provoque un retour à la ligne </br>
-Exemple : L'hiver sera pluvieux</br>
-L'hiver</br>
-sera</br>
-pluvieux</p>
+<%
+    for (int i = 0; i < chaine.length(); i++) {
+        if (chaine.charAt(i) == ' ') {
+            out.println("<br>");
+        } else {
+            out.print(chaine.charAt(i));
+        }
+    }
+    out.println("<br>");
+%>
 
 <h2>Exercice 4 : Afficher une lettre sur deux</h2>
-<p>Ecrire le programme pour afficher seulement une lettre sur deux de votre texte </br>
-Exemple : L'hiver sera pluvieux</br>
-Lhvrsr lvex</p>
+<%
+    for (int i = 0; i < chaine.length(); i += 2) {
+        out.print(chaine.charAt(i));
+    }
+    out.println("<br>"); // Pour un retour à la ligne après le texte
+%>
 
 <h2>Exercice 5 : La phrase en verlant</h2>
-<p>Ecrire le programme afin d'afficher le texte en verlant </br>
-Exemple : L'hiver sera pluvieux</br>
-xueivulp ares revih'l</p>
+<%
+    for (int i = chaine.length() - 1 ; i >= 0; i--) {
+            out.print(chaine.charAt(i));
+    }
+    out.println("<br>");
+%>
 
 <h2>Exercice 6 : Consonnes et voyelles</h2>
-<p>Ecrire le programme afin de compter les consonnes et les voyelles dans votre texte</p>
+<%
+    int nbVoyelles = 0;
+    int nbConsonnes = 0;
+    String voyelles = "aeiouyAEIOUY";
+
+    for (int i = 0; i < chaine.length(); i++) {
+        char c = chaine.charAt(i);
+        if (Character.isLetter(c)) {
+            if (voyelles.indexOf(c) != -1) {
+                nbVoyelles++;
+            } else {
+                nbConsonnes++;
+            }
+        }
+    }
+%>
+<p>Nombre de voyelles : <%= nbVoyelles %></p>
+<p>Nombre de consonnes : <%= nbConsonnes %></p>
 
 <% } %>
 <p><a href="index.html">Retour au sommaire</a></p>
