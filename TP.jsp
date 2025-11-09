@@ -8,5 +8,6 @@
 <body>
 <h1>Bienvenue dans le Mini Gestionnaire de Tâches</h1>
 <p><a href="taches.jsp">Aller aux tâches</a></p>
+<p><a href="taches.jsp">Retour au sommaire</a></p>
 </body>
 </html>
