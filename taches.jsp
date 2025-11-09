@@ -126,6 +126,9 @@
         <p><i>Aucune tâche pour le moment.</i></p>
     <%
         } else {
+    %>
+        <ol>
+    <%
             for (int i = 0; i < taches.size(); i++) {
                 Task tache = taches.get(i);
                 
@@ -134,20 +137,30 @@
                                 // Détermine le texte du lien pour basculer le statut de la tâche
                 String texteToggle = tache.isTacheFinie() ? "Rétablir" : "Terminer";
     %>
-        <div>
-            <strong><%= tache.getNom() %></strong> - <%= tache.getDescription() %> - <%= tache.getDate() %> - <%= statut %><br>
+        <li>
+                <h3>
+                    <strong><%= tache.getNom() %></strong>
+                    <br>
+                    <small>Description: <%= tache.getDescription() %></small><br>
+                    <small>Date d’échéance: <%= tache.getDate() %></small><br>
+                    <i>Statut: <%= statut %></i>
+                </h3>
             
             <%-- Bouton pour basculer le statut de la tâche (terminer ou rétablir) --%>
             <input type="button" value="<%= texteToggle %>" onclick="location.href='taches.jsp?action=toggle&index=<%= i %>'">
             
             <%-- Bouton pour supprimer la tâche --%>
             <input type="button" value="Supprimer" onclick="location.href='taches.jsp?action=delete&index=<%= i %>'">
-        </div>
-        <hr>
+        </li>
+        <br>
     <%
             }
+    %>
+        <ol>
+    <%
         }
     %>
+<hr size="2" noshade>
 
 </body>
 </html>
