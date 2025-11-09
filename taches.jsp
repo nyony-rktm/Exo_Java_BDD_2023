@@ -95,7 +95,7 @@
 <body>
 
     <h1>Gestionnaire de Tâches</h1>
-    <p><a href="TP.jsp">⬅ Retour à l'accueil</a></p>
+    <p><a href="index.html">Retour à l'accueil</a></p>
 
     <hr size="2" noshade>
 
