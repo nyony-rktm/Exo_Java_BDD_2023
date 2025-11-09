@@ -87,3 +87,53 @@
         return;
     }
 %>
+
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8">
+    <title>Gestionnaire de Tâches</title>
+</head>
+<body>
+
+    <h1>Gestionnaire de Tâches</h1>
+    <p><a href="TP.jsp">⬅ Retour à l'accueil</a></p>
+
+    <h2>Ajouter une tâche</h2>
+    <form method="post" action="taches.jsp">
+        Nom : <input type="text" name="Nom" required><br>
+        Description : <input type="text" name="Description"><br>
+        Date d’échéance : <input type="date" name="Date" required><br>
+        <button type="submit">Ajouter la tâche</button>
+    </form>    <h2>Liste des tâches</h2>
+    <%
+        // Vérifie si la liste des tâches est vide
+        if (taches.isEmpty()) {
+    %>
+        <p>Aucune tâche pour le moment.</p>
+    <%
+        } else {
+            for (int i = 0; i < taches.size(); i++) {
+                Task tache = taches.get(i);
+                
+                // Statut de la tâche (terminée ou en cours)
+                String statut = tache.isTacheFinie() ? "Terminée" : "En cours";
+                                // Détermine le texte du lien pour basculer le statut de la tâche
+                String texteToggle = tache.isTacheFinie() ? "Rétablir" : "Terminer";
+    %>
+        <div>
+            <strong><%= tache.getNom() %></strong> - <%= tache.getDescription() %> - <%= tache.getDate() %> - <%= statut %><br>
+            
+            <%-- Bouton pour basculer le statut de la tâche (terminer ou rétablir) --%>
+            <input type="button" value="<%= texteToggle %>" onclick="location.href='taches.jsp?action=toggle&index=<%= i %>'">
+            
+            <%-- Bouton pour supprimer la tâche --%>
+            <input type="button" value="Supprimer" onclick="location.href='taches.jsp?action=delete&index=<%= i %>'">
+        </div>
+        <hr>
+    <%
+            }
+        }
+    %>
+
+</body>
+</html>
