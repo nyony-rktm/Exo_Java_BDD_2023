@@ -13,8 +13,8 @@
             this.nom = nom;
             this.description = description;
             this.dateEcheance = dateEcheance;
-            
             this.tacheFinie = false; // Statut par défaut
+        }
 
         //Getters
         public String getNom() { return nom; }
