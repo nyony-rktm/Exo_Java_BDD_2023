@@ -97,18 +97,33 @@
     <h1>Gestionnaire de Tâches</h1>
     <p><a href="TP.jsp">⬅ Retour à l'accueil</a></p>
 
+    <hr size="2" noshade>
+
     <h2>Ajouter une tâche</h2>
     <form method="post" action="taches.jsp">
-        Nom : <input type="text" name="Nom" required><br>
-        Description : <input type="text" name="Description"><br>
-        Date d’échéance : <input type="date" name="Date" required><br>
-        <button type="submit">Ajouter la tâche</button>
-    </form>    <h2>Liste des tâches</h2>
+        <fieldset>
+            <legend>Nouvelle Tâche</legend>
+            <label for="nom">Nom :</label><br>
+            <input type="text" id="nom" name="Nom" size="50" required><br><br>
+            
+            <label for="description">Description :</label><br>
+            <textarea id="description" name="Description" rows="3" cols="50"></textarea><br><br>
+            
+            <label for="date">Date d’échéance :</label><br>
+            <input type="date" id="date" name="Date" required><br><br>
+            
+            <button type="submit">Ajouter la tâche</button>
+        </fieldset>
+    </form>
+
+<hr size="2" noshade>
+
+<h2>Liste des tâches</h2>
     <%
         // Vérifie si la liste des tâches est vide
         if (taches.isEmpty()) {
     %>
-        <p>Aucune tâche pour le moment.</p>
+        <p><i>Aucune tâche pour le moment.</i></p>
     <%
         } else {
             for (int i = 0; i < taches.size(); i++) {
