@@ -143,7 +143,7 @@
                     <br>
                     <small>Description: <%= tache.getDescription() %></small><br>
                     <small>Date d’échéance: <%= tache.getDate() %></small><br>
-                    <i>Statut: <%= statut %></i>
+                    <small><i>Statut: <%= statut %></i></small>
                 </h3>
             
             <%-- Bouton pour basculer le statut de la tâche (terminer ou rétablir) --%>
